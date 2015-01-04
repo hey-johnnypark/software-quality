@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="0" timestamp="1420396040000" analysisTimestamp="1420396070442" release="">
+  <Project>
+    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/findbugs/Main.class</Jar>
+    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/mccabe/McCabeExampleFullCovered.class</Jar>
+    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/mccabe/McCabeExampleHalfCovered.class</Jar>
+    <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/sonar/findbugs/annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/sonar/findbugs/jsr305.jar</AuxClasspathEntry>
+    <SrcDir>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/src/main/java</SrcDir>
+    <WrkDir>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target</WrkDir>
+  </Project>
+  <BugInstance type="IL_INFINITE_RECURSIVE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS" instanceHash="1eeb3e7adc3a4d4e5aef36b005f29fa7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="9" cweid="674">
+    <ShortMessage>An apparent infinite recursive loop</ShortMessage>
+    <LongMessage>There is an apparent infinite recursive loop in findbugs.Main.infiniteRecursion()</LongMessage>
+    <Class classname="findbugs.Main" primary="true">
+      <SourceLine classname="findbugs.Main" start="3" end="33" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java">
+        <Message>At Main.java:[lines 3-33]</Message>
+      </SourceLine>
+      <Message>In class findbugs.Main</Message>
+    </Class>
+    <Method classname="findbugs.Main" name="infiniteRecursion" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="findbugs.Main" start="6" end="7" startBytecode="0" endBytecode="50" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java"/>
+      <Message>In method findbugs.Main.infiniteRecursion()</Message>
+    </Method>
+    <SourceLine classname="findbugs.Main" primary="true" start="6" end="6" startBytecode="1" endBytecode="1" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java">
+      <Message>At Main.java:[line 6]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_BOOLEAN_RETURN_NULL" priority="1" abbrev="NP" category="BAD_PRACTICE" instanceHash="eeaccea49d51223272e42dbdf022140d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="12" cweid="476">
+    <ShortMessage>Method with Boolean return type returns explicit null</ShortMessage>
+    <LongMessage>findbugs.Main.isItTrue() has Boolean return type and returns explicit null</LongMessage>
+    <Class classname="findbugs.Main" primary="true">
+      <SourceLine classname="findbugs.Main" start="3" end="33" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java">
+        <Message>At Main.java:[lines 3-33]</Message>
+      </SourceLine>
+      <Message>In class findbugs.Main</Message>
+    </Class>
+    <Method classname="findbugs.Main" name="isItTrue" signature="()Ljava/lang/Boolean;" isStatic="false" primary="true">
+      <SourceLine classname="findbugs.Main" start="10" end="10" startBytecode="0" endBytecode="43" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java"/>
+      <Message>In method findbugs.Main.isItTrue()</Message>
+    </Method>
+    <SourceLine classname="findbugs.Main" primary="true" start="10" end="10" startBytecode="1" endBytecode="1" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java">
+      <Message>At Main.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" abbrev="NP" category="CORRECTNESS" instanceHash="b3e5f16a4f4fcafa7f24c820db71788c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="8" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of obj1 in findbugs.Main.dereference(Object, Object)</LongMessage>
+    <Class classname="findbugs.Main" primary="true">
+      <SourceLine classname="findbugs.Main" start="3" end="33" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java">
+        <Message>At Main.java:[lines 3-33]</Message>
+      </SourceLine>
+      <Message>In class findbugs.Main</Message>
+    </Class>
+    <Method classname="findbugs.Main" name="dereference" signature="(Ljava/lang/Object;Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="findbugs.Main" start="18" end="18" startBytecode="0" endBytecode="85" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java"/>
+      <Message>In method findbugs.Main.dereference(Object, Object)</Message>
+    </Method>
+    <LocalVariable name="obj1" register="1" pc="11" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from obj1</Message>
+    </LocalVariable>
+    <SourceLine classname="findbugs.Main" primary="true" start="18" end="18" startBytecode="12" endBytecode="12" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at Main.java:[line 18]</Message>
+    </SourceLine>
+    <SourceLine classname="findbugs.Main" start="18" end="18" startBytecode="7" endBytecode="7" sourcefile="Main.java" sourcepath="findbugs/Main.java" relSourcepath="findbugs/Main.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Main.java:[line 18]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugPattern type="NP_BOOLEAN_RETURN_NULL" abbrev="NP" category="BAD_PRACTICE">
+    <ShortDescription>Method with Boolean return type returns explicit null</ShortDescription>
+    <Details><![CDATA[
+       
+       <p>
+    A method that returns either Boolean.TRUE, Boolean.FALSE or null is an accident waiting to happen.
+    This method can be invoked as though it returned a value of type boolean, and
+    the compiler will insert automatic unboxing of the Boolean value. If a null value is returned,
+    this will result in a NullPointerException.
+       </p>
+       
+       ]]></Details>
+  </BugPattern>
+  <BugPattern type="IL_INFINITE_RECURSIVE_LOOP" abbrev="IL" category="CORRECTNESS" cweid="674">
+    <ShortDescription>An apparent infinite recursive loop</ShortDescription>
+    <Details><![CDATA[
+
+<p>This method unconditionally invokes itself. This would seem to indicate
+an infinite recursive loop that will result in a stack overflow.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="IL">
+    <Description>Infinite Loop</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 4 Jan 2015 19:27:20 +0100" total_classes="3" referenced_classes="15" total_bugs="3" total_size="46" num_packages="2" vm_version="24.60-b09" cpu_seconds="9.01" clock_seconds="7.16" peak_mbytes="457.20" alloc_mbytes="1820.50" gc_seconds="0.00" priority_2="1" priority_1="2">
+    <FileStats path="findbugs/Main.java" bugCount="3" size="20" bugHash="d166745ba96063c96b9955117b7b37b0"/>
+    <FileStats path="mccabe/McCabeExampleFullCovered.java" bugCount="0" size="13"/>
+    <FileStats path="mccabe/McCabeExampleHalfCovered.java" bugCount="0" size="13"/>
+    <PackageStats package="findbugs" total_bugs="3" total_types="1" total_size="20" priority_2="1" priority_1="2">
+      <ClassStats class="findbugs.Main" sourceFile="Main.java" interface="false" size="20" bugs="3" priority_2="1" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="mccabe" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="mccabe.McCabeExampleFullCovered" sourceFile="McCabeExampleFullCovered.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="mccabe.McCabeExampleHalfCovered" sourceFile="McCabeExampleHalfCovered.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1272" invocations="325" avgMicrosecondsPerInvocation="3914" maxMicrosecondsPerInvocation="119716" standardDeviationMircosecondsPerInvocation="11452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="400" invocations="62" avgMicrosecondsPerInvocation="6466" maxMicrosecondsPerInvocation="152449" standardDeviationMircosecondsPerInvocation="19419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="335" invocations="326" avgMicrosecondsPerInvocation="1029" maxMicrosecondsPerInvocation="63227" standardDeviationMircosecondsPerInvocation="4759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BooleanReturnNull" totalMilliseconds="325" invocations="3" avgMicrosecondsPerInvocation="108465" maxMicrosecondsPerInvocation="325196" standardDeviationMircosecondsPerInvocation="153251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="300" invocations="15" avgMicrosecondsPerInvocation="20030" maxMicrosecondsPerInvocation="76912" standardDeviationMircosecondsPerInvocation="24450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="207" invocations="10" avgMicrosecondsPerInvocation="20777" maxMicrosecondsPerInvocation="187837" standardDeviationMircosecondsPerInvocation="55873"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="207" invocations="294" avgMicrosecondsPerInvocation="706" maxMicrosecondsPerInvocation="44060" standardDeviationMircosecondsPerInvocation="3903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="147" invocations="15" avgMicrosecondsPerInvocation="9853" maxMicrosecondsPerInvocation="53422" standardDeviationMircosecondsPerInvocation="13909"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="143" invocations="10" avgMicrosecondsPerInvocation="14367" maxMicrosecondsPerInvocation="92295" standardDeviationMircosecondsPerInvocation="28268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="101" invocations="10" avgMicrosecondsPerInvocation="10168" maxMicrosecondsPerInvocation="60051" standardDeviationMircosecondsPerInvocation="17662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="99" invocations="15" avgMicrosecondsPerInvocation="6649" maxMicrosecondsPerInvocation="42486" standardDeviationMircosecondsPerInvocation="11390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="92" invocations="10" avgMicrosecondsPerInvocation="9220" maxMicrosecondsPerInvocation="49481" standardDeviationMircosecondsPerInvocation="14824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="81" invocations="20" avgMicrosecondsPerInvocation="4094" maxMicrosecondsPerInvocation="33467" standardDeviationMircosecondsPerInvocation="9031"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
