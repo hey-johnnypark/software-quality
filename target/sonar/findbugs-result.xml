@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="2.0.3" sequence="0" timestamp="1420396040000" analysisTimestamp="1420396070442" release="">
+<BugCollection version="2.0.3" sequence="0" timestamp="1420410769000" analysisTimestamp="1420410796812" release="">
   <Project>
     <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/findbugs/Main.class</Jar>
     <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/mccabe/McCabeExampleFullCovered.class</Jar>
+    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/demo1/Foo.class</Jar>
     <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/mccabe/McCabeExampleHalfCovered.class</Jar>
+    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/demo2/Bar.class</Jar>
     <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/sonar/findbugs/annotations.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/sonar/findbugs/jsr305.jar</AuxClasspathEntry>
     <SrcDir>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/src/main/java</SrcDir>
     <WrkDir>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target</WrkDir>
   </Project>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="de1e3505636771b26f92c980e1305379" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: demo1.Foo.bar</LongMessage>
+    <Class classname="demo1.Foo" primary="true">
+      <SourceLine classname="demo1.Foo" start="10" end="16" sourcefile="Foo.java" sourcepath="demo1/Foo.java" relSourcepath="demo1/Foo.java">
+        <Message>At Foo.java:[lines 10-16]</Message>
+      </SourceLine>
+      <Message>In class demo1.Foo</Message>
+    </Class>
+    <Field classname="demo1.Foo" name="bar" signature="Ldemo2/Bar;" isStatic="false" primary="true">
+      <SourceLine classname="demo1.Foo" sourcefile="Foo.java" sourcepath="demo1/Foo.java" relSourcepath="demo1/Foo.java">
+        <Message>In Foo.java</Message>
+      </SourceLine>
+      <Message>Field demo1.Foo.bar</Message>
+    </Field>
+    <SourceLine classname="demo1.Foo" primary="true" start="11" end="11" startBytecode="6" endBytecode="6" sourcefile="Foo.java" sourcepath="demo1/Foo.java" relSourcepath="demo1/Foo.java">
+      <Message>At Foo.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
   <BugInstance type="IL_INFINITE_RECURSIVE_LOOP" priority="1" abbrev="IL" category="CORRECTNESS" instanceHash="1eeb3e7adc3a4d4e5aef36b005f29fa7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="9" cweid="674">
     <ShortMessage>An apparent infinite recursive loop</ShortMessage>
     <LongMessage>There is an apparent infinite recursive loop in findbugs.Main.infiniteRecursion()</LongMessage>
@@ -74,6 +95,9 @@
   <BugCategory category="CORRECTNESS">
     <Description>Correctness</Description>
   </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
   <BugPattern type="NP_BOOLEAN_RETURN_NULL" abbrev="NP" category="BAD_PRACTICE">
     <ShortDescription>Method with Boolean return type returns explicit null</ShortDescription>
     <Details><![CDATA[
@@ -96,6 +120,14 @@ an infinite recursive loop that will result in a stack overflow.</p>
 
     ]]></Details>
   </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
   <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
     <ShortDescription>Possible null pointer dereference</ShortDescription>
     <Details><![CDATA[
@@ -112,14 +144,25 @@ the null pointer exception can't ever be executed; deciding that is beyond the a
   <BugCode abbrev="IL">
     <Description>Infinite Loop</Description>
   </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
   <BugCode abbrev="NP" cweid="476">
     <Description>Null pointer dereference</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Sun, 4 Jan 2015 19:27:20 +0100" total_classes="3" referenced_classes="15" total_bugs="3" total_size="46" num_packages="2" vm_version="24.60-b09" cpu_seconds="9.01" clock_seconds="7.16" peak_mbytes="457.20" alloc_mbytes="1820.50" gc_seconds="0.00" priority_2="1" priority_1="2">
+  <FindBugsSummary timestamp="Sun, 4 Jan 2015 23:32:49 +0100" total_classes="5" referenced_classes="17" total_bugs="4" total_size="59" num_packages="4" vm_version="24.60-b09" cpu_seconds="9.24" clock_seconds="6.80" peak_mbytes="441.11" alloc_mbytes="1820.50" gc_seconds="0.00" priority_2="2" priority_1="2">
+    <FileStats path="demo1/Foo.java" bugCount="1" size="9" bugHash="08fa0c7c4bd6097bac77fcaa8c82bc84"/>
+    <FileStats path="demo2/Bar.java" bugCount="0" size="4"/>
     <FileStats path="findbugs/Main.java" bugCount="3" size="20" bugHash="d166745ba96063c96b9955117b7b37b0"/>
     <FileStats path="mccabe/McCabeExampleFullCovered.java" bugCount="0" size="13"/>
     <FileStats path="mccabe/McCabeExampleHalfCovered.java" bugCount="0" size="13"/>
+    <PackageStats package="demo1" total_bugs="1" total_types="1" total_size="9" priority_2="1">
+      <ClassStats class="demo1.Foo" sourceFile="Foo.java" interface="false" size="9" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="demo2" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="demo2.Bar" sourceFile="Bar.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
     <PackageStats package="findbugs" total_bugs="3" total_types="1" total_size="20" priority_2="1" priority_1="2">
       <ClassStats class="findbugs.Main" sourceFile="Main.java" interface="false" size="20" bugs="3" priority_2="1" priority_1="2"/>
     </PackageStats>
@@ -128,19 +171,17 @@ the null pointer exception can't ever be executed; deciding that is beyond the a
       <ClassStats class="mccabe.McCabeExampleHalfCovered" sourceFile="McCabeExampleHalfCovered.java" interface="false" size="13" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1272" invocations="325" avgMicrosecondsPerInvocation="3914" maxMicrosecondsPerInvocation="119716" standardDeviationMircosecondsPerInvocation="11452"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="400" invocations="62" avgMicrosecondsPerInvocation="6466" maxMicrosecondsPerInvocation="152449" standardDeviationMircosecondsPerInvocation="19419"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="335" invocations="326" avgMicrosecondsPerInvocation="1029" maxMicrosecondsPerInvocation="63227" standardDeviationMircosecondsPerInvocation="4759"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.BooleanReturnNull" totalMilliseconds="325" invocations="3" avgMicrosecondsPerInvocation="108465" maxMicrosecondsPerInvocation="325196" standardDeviationMircosecondsPerInvocation="153251"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="300" invocations="15" avgMicrosecondsPerInvocation="20030" maxMicrosecondsPerInvocation="76912" standardDeviationMircosecondsPerInvocation="24450"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="207" invocations="10" avgMicrosecondsPerInvocation="20777" maxMicrosecondsPerInvocation="187837" standardDeviationMircosecondsPerInvocation="55873"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="207" invocations="294" avgMicrosecondsPerInvocation="706" maxMicrosecondsPerInvocation="44060" standardDeviationMircosecondsPerInvocation="3903"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="147" invocations="15" avgMicrosecondsPerInvocation="9853" maxMicrosecondsPerInvocation="53422" standardDeviationMircosecondsPerInvocation="13909"/>
-      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="143" invocations="10" avgMicrosecondsPerInvocation="14367" maxMicrosecondsPerInvocation="92295" standardDeviationMircosecondsPerInvocation="28268"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="101" invocations="10" avgMicrosecondsPerInvocation="10168" maxMicrosecondsPerInvocation="60051" standardDeviationMircosecondsPerInvocation="17662"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="99" invocations="15" avgMicrosecondsPerInvocation="6649" maxMicrosecondsPerInvocation="42486" standardDeviationMircosecondsPerInvocation="11390"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="92" invocations="10" avgMicrosecondsPerInvocation="9220" maxMicrosecondsPerInvocation="49481" standardDeviationMircosecondsPerInvocation="14824"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="81" invocations="20" avgMicrosecondsPerInvocation="4094" maxMicrosecondsPerInvocation="33467" standardDeviationMircosecondsPerInvocation="9031"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1244" invocations="329" avgMicrosecondsPerInvocation="3781" maxMicrosecondsPerInvocation="194024" standardDeviationMircosecondsPerInvocation="12623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="395" invocations="17" avgMicrosecondsPerInvocation="23271" maxMicrosecondsPerInvocation="86557" standardDeviationMircosecondsPerInvocation="28461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="320" invocations="65" avgMicrosecondsPerInvocation="4933" maxMicrosecondsPerInvocation="53084" standardDeviationMircosecondsPerInvocation="7931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="242" invocations="17" avgMicrosecondsPerInvocation="14262" maxMicrosecondsPerInvocation="172153" standardDeviationMircosecondsPerInvocation="39988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="194" invocations="298" avgMicrosecondsPerInvocation="651" maxMicrosecondsPerInvocation="78541" standardDeviationMircosecondsPerInvocation="4615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="182" invocations="330" avgMicrosecondsPerInvocation="553" maxMicrosecondsPerInvocation="38961" standardDeviationMircosecondsPerInvocation="2337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="163" invocations="17" avgMicrosecondsPerInvocation="9619" maxMicrosecondsPerInvocation="98814" standardDeviationMircosecondsPerInvocation="22933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="132" invocations="17" avgMicrosecondsPerInvocation="7779" maxMicrosecondsPerInvocation="45373" standardDeviationMircosecondsPerInvocation="11957"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="121" invocations="17" avgMicrosecondsPerInvocation="7170" maxMicrosecondsPerInvocation="46247" standardDeviationMircosecondsPerInvocation="12118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="108" invocations="17" avgMicrosecondsPerInvocation="6407" maxMicrosecondsPerInvocation="29686" standardDeviationMircosecondsPerInvocation="8581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="106" invocations="17" avgMicrosecondsPerInvocation="6242" maxMicrosecondsPerInvocation="29496" standardDeviationMircosecondsPerInvocation="7923"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>
