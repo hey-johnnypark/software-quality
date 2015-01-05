@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+extraProperties=sonar.jdbc.username\=sonar\r\nsonar.jdbc.driver\=com.mysql.jdbc.Driver\r\nsonar.host.url\=http\://192.168.59.103\:9000\r\nsonar.jdbc.password\=123qwe\r\nsonar.jdbc.url\=jdbc\:mysql\://192.168.59.103\:3306/sonar?useUnicode\=true&characterEncoding\=utf8
+projectKey=io.jp\:software-quality
+serverUrl=http\://192.168.59.103\:9000
+version=2

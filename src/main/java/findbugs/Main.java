@@ -6,6 +6,10 @@ public class Main {
     infiniteRecursion();
   }
 
+  void infiniteRecursion2nd() {
+    infiniteRecursion2nd();
+  }
+
   Boolean isItTrue() {
     return null;
   }
@@ -20,16 +24,18 @@ public class Main {
 
   /**
    * main
-   * @param args argument
+   * 
+   * @param args
+   *          argument
    */
   public static void main(String[] args) {
     Main main = new Main();
     main.infiniteRecursion();
+    main.infiniteRecursion2nd()
     main.dereference(null, 1);
     if (main.isItTrue()) {
       System.out.println("FooBar");
     }
     main.castToString("String");
   }
-
 }

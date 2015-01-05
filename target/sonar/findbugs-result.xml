@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="2.0.3" sequence="0" timestamp="1420410769000" analysisTimestamp="1420410796812" release="">
+<BugCollection version="2.0.3" sequence="0" timestamp="1420501191000" analysisTimestamp="1420501229557" release="">
   <Project>
+    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/demo1/Foo.class</Jar>
+    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/demo2/Bar.class</Jar>
     <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/findbugs/Main.class</Jar>
     <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/mccabe/McCabeExampleFullCovered.class</Jar>
-    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/demo1/Foo.class</Jar>
     <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/mccabe/McCabeExampleHalfCovered.class</Jar>
-    <Jar>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes/demo2/Bar.class</Jar>
     <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/classes</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/sonar/findbugs/annotations.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/johnnypark/dev/workspaces/eclipse-luna/software-quality/target/sonar/findbugs/jsr305.jar</AuxClasspathEntry>
@@ -151,7 +151,7 @@ the null pointer exception can't ever be executed; deciding that is beyond the a
     <Description>Null pointer dereference</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Sun, 4 Jan 2015 23:32:49 +0100" total_classes="5" referenced_classes="17" total_bugs="4" total_size="59" num_packages="4" vm_version="24.60-b09" cpu_seconds="9.24" clock_seconds="6.80" peak_mbytes="441.11" alloc_mbytes="1820.50" gc_seconds="0.00" priority_2="2" priority_1="2">
+  <FindBugsSummary timestamp="Tue, 6 Jan 2015 00:39:51 +0100" total_classes="5" referenced_classes="17" total_bugs="4" total_size="59" num_packages="4" vm_version="24.60-b09" cpu_seconds="10.38" clock_seconds="7.67" peak_mbytes="473.03" alloc_mbytes="1820.50" gc_seconds="0.00" priority_2="2" priority_1="2">
     <FileStats path="demo1/Foo.java" bugCount="1" size="9" bugHash="08fa0c7c4bd6097bac77fcaa8c82bc84"/>
     <FileStats path="demo2/Bar.java" bugCount="0" size="4"/>
     <FileStats path="findbugs/Main.java" bugCount="3" size="20" bugHash="d166745ba96063c96b9955117b7b37b0"/>
@@ -171,17 +171,16 @@ the null pointer exception can't ever be executed; deciding that is beyond the a
       <ClassStats class="mccabe.McCabeExampleHalfCovered" sourceFile="McCabeExampleHalfCovered.java" interface="false" size="13" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1244" invocations="329" avgMicrosecondsPerInvocation="3781" maxMicrosecondsPerInvocation="194024" standardDeviationMircosecondsPerInvocation="12623"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="395" invocations="17" avgMicrosecondsPerInvocation="23271" maxMicrosecondsPerInvocation="86557" standardDeviationMircosecondsPerInvocation="28461"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="320" invocations="65" avgMicrosecondsPerInvocation="4933" maxMicrosecondsPerInvocation="53084" standardDeviationMircosecondsPerInvocation="7931"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="242" invocations="17" avgMicrosecondsPerInvocation="14262" maxMicrosecondsPerInvocation="172153" standardDeviationMircosecondsPerInvocation="39988"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="194" invocations="298" avgMicrosecondsPerInvocation="651" maxMicrosecondsPerInvocation="78541" standardDeviationMircosecondsPerInvocation="4615"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="182" invocations="330" avgMicrosecondsPerInvocation="553" maxMicrosecondsPerInvocation="38961" standardDeviationMircosecondsPerInvocation="2337"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="163" invocations="17" avgMicrosecondsPerInvocation="9619" maxMicrosecondsPerInvocation="98814" standardDeviationMircosecondsPerInvocation="22933"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="132" invocations="17" avgMicrosecondsPerInvocation="7779" maxMicrosecondsPerInvocation="45373" standardDeviationMircosecondsPerInvocation="11957"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="121" invocations="17" avgMicrosecondsPerInvocation="7170" maxMicrosecondsPerInvocation="46247" standardDeviationMircosecondsPerInvocation="12118"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="108" invocations="17" avgMicrosecondsPerInvocation="6407" maxMicrosecondsPerInvocation="29686" standardDeviationMircosecondsPerInvocation="8581"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="106" invocations="17" avgMicrosecondsPerInvocation="6242" maxMicrosecondsPerInvocation="29496" standardDeviationMircosecondsPerInvocation="7923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1182" invocations="329" avgMicrosecondsPerInvocation="3594" maxMicrosecondsPerInvocation="90414" standardDeviationMircosecondsPerInvocation="8999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="666" invocations="330" avgMicrosecondsPerInvocation="2020" maxMicrosecondsPerInvocation="260207" standardDeviationMircosecondsPerInvocation="15502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="494" invocations="17" avgMicrosecondsPerInvocation="29067" maxMicrosecondsPerInvocation="104361" standardDeviationMircosecondsPerInvocation="34599"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="377" invocations="65" avgMicrosecondsPerInvocation="5812" maxMicrosecondsPerInvocation="53654" standardDeviationMircosecondsPerInvocation="9521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="258" invocations="17" avgMicrosecondsPerInvocation="15205" maxMicrosecondsPerInvocation="179959" standardDeviationMircosecondsPerInvocation="41732"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="234" invocations="298" avgMicrosecondsPerInvocation="787" maxMicrosecondsPerInvocation="54529" standardDeviationMircosecondsPerInvocation="4035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="214" invocations="17" avgMicrosecondsPerInvocation="12604" maxMicrosecondsPerInvocation="62340" standardDeviationMircosecondsPerInvocation="18505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="202" invocations="17" avgMicrosecondsPerInvocation="11933" maxMicrosecondsPerInvocation="88868" standardDeviationMircosecondsPerInvocation="21727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="146" invocations="17" avgMicrosecondsPerInvocation="8594" maxMicrosecondsPerInvocation="99553" standardDeviationMircosecondsPerInvocation="22984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="110" invocations="13" avgMicrosecondsPerInvocation="8498" maxMicrosecondsPerInvocation="95060" standardDeviationMircosecondsPerInvocation="25162"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>
